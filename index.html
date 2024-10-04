@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="path/to/your/javascript.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#home" class="logo">
+            <img src="nayon.jpg" alt="Nayan Saha Logo" /> <!-- Replace with the correct path to your logo -->
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<!-- Home Section -->
+<section id="home" class="section home">
+    <div class="content">
+        <h1 class="title">Hello, I'm Nayon</h1>
+        <h3>Developer | Programmer | Designer | Researcher</h3>
+        <br><br>
+        <a href="#about" class="btn">Know me</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about">
+    <div class="container about-container">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I’m Nayon Chandra Saha, a 12th-grade student with a passion for technology and innovation. My journey in tech began early, leading me to participate in numerous science festivals, where I gained recognition as a national finalist in the 5th Bangladesh Robot Olympiad.</p>
+            <p>With skills in programming (Python and C) and web development, I have successfully completed projects like a health service system to enhance healthcare awareness in Bangladesh and a dynamic quiz website using HTML, CSS, and JavaScript. I also serve as the CFO of an IT agency called EduTime, where I contribute to innovative tech solutions.</p>
+            <p>My leadership in extracurricular activities includes guiding my school's cricket team to its first district championship. I aspire to pursue a Bachelor's degree in Computer Science in the USA, seeking free study opportunities to further my education.</p>
+            <p>Outside of academics, I enjoy cricket and singing, which help me stay balanced and motivated.</p>
+        </div>
+        <div class="about-image-container">
+            <div class="bubble-background"></div>
+            <img src="pic1.png" alt="Nayan Saha" class="about-image">
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="section projects">
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Health Code BD</h3>
+                <p>Improvement of health eco system.</p>
+                <button class="btn" onclick="openModal('project1Modal')">Details</button>
+            </div>
+            <div class="project-card">
+                <h3>Water Monitoring System</h3>
+                <p>Complete management of water supplying system.</p>
+                <button class="btn" onclick="openModal('project2Modal')">Details</button>
+            </div>
+            <div class="project-card">
+                <h3>Quadcopter Drone</h3>
+                <p> Designed and built a functional quadcopter drone from scratch to explore aerial technology and automation.</p>
+                <button class="btn" onclick="openModal('project3Modal')">Details</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="project1Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project1Modal')">&times;</span>
+        <h2>Health Code BD</h2>
+        <p>The Health Service System is an innovative project aimed at improving healthcare accessibility and awareness across Bangladesh. By leveraging technology, this system allows users to access vital health information and services remotely.</p>
+        
+        <h4>Key Features:</h4>
+        <ul>
+            <li>Real-time health data collection and analysis.</li>
+            <li>User-friendly interface for easy access to health services.</li>
+            <li>Educational resources to raise health awareness among citizens.</li>
+            <li>Secure storage of medical history for informed decision-making.</li>
+        </ul>
+
+        <h4>Technologies Used:</h4>
+        <ul>
+            <li>HTML, CSS, JavaScript for the front-end development.</li>
+            <li>Python for backend functionalities.</li>
+            <li>Data analysis tools for interpreting health data.</li>
+            <li>Database management for storing user information securely.</li>
+        </ul>
+
+        <h4>Impact:</h4>
+        <p>This project aims to empower citizens with health knowledge and facilitate better access to medical services, ultimately contributing to improved public health outcomes in the community.</p>
+    </div>
+</div>
+
+
+<div id="project2Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project2Modal')">&times;</span>
+        <h2>Water Monitoring System</h2>
+        <p>Created a system to monitor water quality, ensuring safe and clean water for communities.</p>
+        <h4>Technologies Used:</h4>
+        <ul>
+            <li>IoT</li>
+            <li>Python, C++</li>
+            <li>ESP32, Sensors</li>
+            <li>Data Base</li>
+        </ul>
+        <h2>Features</h2>
+        <p>Utilizes sensors to monitor water parameters and sends real-time data for analysis and alerts when quality drops below a set threshold.</p>
+        <h2>Outcomes</h2>
+        <p> Increased awareness of water safety and contributed to improving public health through technology.</p>
+        
+ 
+    </div>
+</div>
+
+<div id="project3Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project3Modal')">&times;</span>
+        <h2>Quadcopter Drone</h2>
+        <p>Designed and built a fully functional quadcopter drone from scratch, showcasing expertise in hardware engineering and automation.</p>
+        <h4>Technologies Used:</h4>
+        <ul>
+            <li>KK 2.1.5 flight controller</li>
+            <li>Quadcopter Drone Frame</li>
+            <li>FS i6x transmitter</li>
+            <li>ESC, Brushless Motors, Propeller</li>
+        </ul>
+        <h4>Description</h4>
+        <p>This project involved constructing a quadcopter drone equipped with advanced sensors and propulsion systems, allowing for autonomous flight and remote control via a smartphone or dedicated controller. The drone is capable of real-time data transmission, aerial monitoring, and obstacle avoidance. Through this project, I explored the intricacies of aerial technology, control systems, and the integration of IoT for enhanced functionality.
+        </p>
+        <h4>Outcome</h4>
+        <p>Successfully built and launched a fully operational drone, demonstrating proficiency in both hardware development and software programming for aerial robotics.</p>
+    </div>
+</div>
+
+
+<!-- Skills Section -->
+<section id="skills" class="section skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <h3>HTML, CSS, JavaScript</h3>
+                <p>Proficient in building responsive and interactive web pages using modern web technologies, ensuring a great user experience.</p>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Experienced in using Python for various applications, including data analysis, automation, and web development with frameworks like Django.</p>
+            </div>
+            <div class="skill">
+                <h3>C Programming</h3>
+                <p>Solid understanding of C programming for developing algorithms and data structures, emphasizing efficiency and performance.</p>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>Hands-on experience in developing full-stack web applications, utilizing front-end and back-end technologies to create dynamic websites.</p>
+            </div>
+            <div class="skill">
+                <h3>Data Analysis</h3>
+                <p>Skilled in analyzing data sets using Python libraries like Pandas and NumPy to extract meaningful insights for decision-making.</p>
+            </div>
+            <div class="skill">
+                <h3>Project Management</h3>
+                <p>Ability to lead and manage tech projects effectively, ensuring timely delivery and adherence to quality standards.</p>
+            </div>
+            <div class="skill">
+                <h3>Robotics</h3>
+                <p>National finalist in the Bangladesh Robot Olympiad, with experience in programming and designing robots for various competitions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Achievements Section -->
+<section id="achievements" class="section achievements">
+    <div class="container">
+        <h2>Achievements</h2>
+        <div class="achievement-grid">
+            <div class="achievement-card">
+                <h3>Best Student Award - Upozila 2023</h3>
+                <p>Recognized as the best student for exceptional performance in academics and extracurricular activities, showcasing leadership and dedication.</p>
+            </div>
+
+            <div class="achievement-card">
+                <h3>1st Place(Two times) - District level Science Fair</h3>
+                <p>Achieved first place in the Upazila Science Fair for innovative project presentations, showcasing creativity and scientific knowledge.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>Runner-Up - IAIT National Festival</h3>
+                <p>Secured the runner-up position in an IT festival, demonstrating technical skills and creativity in project development.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>National Finalist - Bangladesh Robot Olympiad</h3>
+                <p>Achieved national finalist status in the 5th Bangladesh Robot Olympiad, showcasing skills in robotics and programming.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>District Champion in Cricket</h3>
+                <p>Led the school cricket team to its first-ever district championship, demonstrating teamwork and strategic leadership skills.</p>
+            </div>
+            <div class="achievement-card">
+                <h3>First Place in Solo Debate - District Level</h3>
+                <p>I won first place in a district-level solo debate, showcasing my ability to articulate compelling arguments and think critically under pressure. This achievement highlights my strong communication and persuasive skills.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Works Section -->
+<section id="works" class="section works">
+    <div class="container">
+        <h2>Works</h2>
+        <div class="project-grid">
+
+            <!-- IT Projects -->
+            
+            <div class="project-card">
+                <h3>IT Projects</h3>
+                <p>Develop some innitiative IT projects from my school life</p>
+                <button class="btn" onclick="openModal('nayon245')">More</button>
+            </div>
+
+            <!-- Water Monitoring System -->
+            <div class="project-card">
+                <h3>Research Paper</h3>
+                <p> I work on a research paper about complete water management and monitoring system.</p>
+                <button class="btn" onclick="openModal('nayon246')">More</button>
+            </div>
+
+
+            <!-- Joint Secretary of MGCSC Modal -->
+            <div class="project-card">
+                <h3>Joint Secretary of MGCSC</h3>
+                <p>Served as the Joint Secretary for project display at Mohammadpur Govt. College Science Club.</p>
+                <button class="btn" onclick="openModal('project7Modal')">More</button>
+            </div>
+
+            <!-- Workshop on Project Display -->
+            <div class="project-card">
+                <h3>Workshop on Project Display</h3>
+                <p>Hosted a workshop on innovative project display techniques.</p>
+                <button class="btn" onclick="openModal('project4Modal')">More</button>
+            </div>
+
+            <!-- Scout Camping -->
+            <div class="project-card">
+                <h3>Scout Camping</h3>
+                <p>Engaged in multiple scouting camps to learn survival skills and teamwork.</p>
+                <button class="btn" onclick="openModal('project5Modal')">More</button>
+            </div>
+
+            <!-- Volunteering in Local Festivals -->
+            <div class="project-card">
+                <h3>Local Festivals Volunteering</h3>
+                <p>Participated as a volunteer in organizing and supporting local festivals.</p>
+                <button class="btn" onclick="openModal('project6Modal')">More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure -->
+
+<!-- IT Projects Modal -->
+<div id="nayon245" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('nayon245')">&times;</span>
+        <h2>IT Projects</h2>
+        <p>Here are some of my key IT projects across different domains:</p>
+        
+        <h3>Python Projects</h3>
+        <ul>
+            <li><strong>Voice Assistant:</strong> A voice-controlled application that performs tasks and answers questions using natural language processing.</li>
+            <li><strong>AI Chatbot:</strong> Developed a chatbot capable of understanding user queries and providing intelligent responses.</li>
+            <li><strong>AI Image Generator:</strong> Created a program that generates images based on user inputs using advanced AI algorithms.</li>
+            <li><strong>AI Study Help:</strong> An AI-powered tool designed to assist students with their studies by providing explanations and resources.</li>
+        </ul>
+
+        <h3>Robotics Projects</h3>
+        <ul>
+            <li><strong>Talking Robot:</strong> An interactive robot that can communicate with users, providing responses to questions and performing simple tasks.</li>
+            <li><strong>Fire Fighter Robot:</strong> A robot designed to detect and extinguish small fires using sensors and water-spraying mechanisms.</li>
+            <li><strong>Line Following Robot:</strong> A robot that follows a specific path using infrared sensors to detect the line on the ground.</li>
+            <li><strong>Obstacle Avoiding Robot:</strong> A robot equipped with ultrasonic sensors that can navigate around obstacles autonomously.</li>
+            <li><strong>Smart Home with Automation:</strong> A project that integrates various IoT devices to control home appliances automatically through a central system.</li>
+        </ul>
+
+        <h3>Web Development Projects</h3>
+        <ul>
+            <li><strong>Digital Exam Paper:</strong> Developed a web application for creating and managing digital exam papers.</li>
+            <li><strong>Quiz Website:</strong> A dynamic quiz platform featuring various interactive quizzes and user score tracking.</li>
+            <li><strong>Portfolio Website:</strong> A personal portfolio showcasing my skills, projects, and achievements.</li>
+        </ul>>
+    </div>
+</div>
+
+<!-- Water Monitoring System Modal -->
+<div id="nayon246" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('nayon246')">&times;</span>
+        <h2>Water Monitoring System</h2>
+        <p>The Water Monitoring System is an innovative project developed to enhance water safety and resource management. This system uses IoT technology and advanced sensors to continuously monitor critical parameters such as water quality, temperature, pH levels, and turbidity. The data is collected in real-time and transmitted to a central server for analysis and reporting.
+
+            Key actions performed by the system include real-time water quality assessment, automatic alerts when water quality falls below set safety thresholds, and comprehensive reporting on water usage patterns. The system’s goal is to ensure the availability of safe and clean water while promoting sustainable water management practices.
+            
+            By detecting contamination or anomalies early, the system helps reduce the risks of waterborne diseases and ensures timely intervention to maintain water safety. Additionally, this project is instrumental in raising public awareness about water conservation and optimizing resource use for local communities and municipalities.</p>
+            <br>
+        <h3>Technologies Used:</h3>
+        <br>
+        <p> IoT sensors, ESP32, Python, C++, cloud-based data storage, real-time monitoring software, and custom algorithms for water quality analysis.</p>
+        <br>
+        <h3>Impact:</h3>
+        <br>
+        <p>This project contributes significantly to public health by ensuring cleaner water supplies and enhances water conservation efforts through intelligent monitoring and timely alerts. It empowers local communities and organizations to make informed decisions on water safety and usage.</p>
+    </div>
+</div>
+
+<!-- Joint Secretary of MGCSC Modal -->
+<div id="project7Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project7Modal')">&times;</span>
+        <h2>Joint Secretary of MGCSC</h2>
+        <p>As the Joint Secretary of the project display at Mohammadpur Govt. College Science Club, I played a crucial role in organizing and showcasing scientific projects. My responsibilities included coordinating project submissions, guiding students in their presentations, and ensuring that the displays met the club's standards.</p>
+        <h4>Key Contributions:</h4>
+        <ul>
+            <li>Organized project display events, fostering innovation among students.</li>
+            <li>Provided mentorship to students, helping them improve their presentation skills.</li>
+            <li>Collaborated with other members to enhance the visibility and impact of the science club's initiatives.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Workshop on Project Display Modal -->
+<div id="project4Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project4Modal')">&times;</span>
+        <h2>Workshop on Project Display</h2>
+        <p>I organized and hosted a workshop aimed at teaching students how to present their projects innovatively. We covered aspects such as visual appeal, audience engagement, and effectively communicating the key benefits of their projects to judges and stakeholders.</p>
+        <h4>Key Achievements:</h4>
+        <ul>
+            <li>Helped students improve their project display skills.</li>
+            <li>Increased participant engagement and interest in science fairs.</li>
+            <li>Boosted confidence in presenting technical projects.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Scout Camping Modal -->
+<div id="project5Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project5Modal')">&times;</span>
+        <h2>Scout Camping</h2>
+        <p>As a member of the Scouts, I participated in various camping trips that focused on leadership, teamwork, and outdoor survival skills. These experiences helped me grow personally and learn how to work effectively in teams.</p>
+        <h4>Key Experiences:</h4>
+        <ul>
+            <li>Camping in diverse terrains.</li>
+            <li>Learning first-aid and survival techniques.</li>
+            <li>Leadership development in outdoor settings.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Volunteering in Local Festivals Modal -->
+<div id="project6Modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project6Modal')">&times;</span>
+        <h2>Volunteering in Local Festivals</h2>
+        <p>I actively volunteered in organizing local festivals, where I supported various activities such as managing events, guiding participants, and ensuring smooth coordination between different teams. My contributions helped make these events more enjoyable and successful for the community.</p>
+        <h4>Key Contributions:</h4>
+        <ul>
+            <li>Event management and coordination.</li>
+            <li>Community engagement and support.</li>
+            <li>Building strong team collaboration skills.</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjkvbygd" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+    
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 Nayan Saha. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

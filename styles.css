@@ -1,0 +1,619 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 60px; /* Set the width of your logo */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 30px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.navbar .nav-links a:hover {
+    color: #f39c12;
+}
+
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f39c12;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 24px; /* Size of the hamburger icon */
+    color: #fff; /* Color of the icon */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute; /* Position absolute to overlay */
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: rgba(0, 0, 0, 0.9); /* Background color */
+        z-index: 1; /* Ensure it is above other elements */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+        text-align: center; /* Center the text */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}
+
+
+/* Section Styling */
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #f39c12;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Home Section */
+.home {
+    position: relative; /* Position relative to use the pseudo-element */
+    background-image: url('pic.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the whole section */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: white; /* Change text color for contrast */
+    text-align: center; /* Center text */
+}
+
+/* Dark overlay */
+.home::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover the top */
+    left: 0; /* Cover the left */
+    right: 0; /* Cover the right */
+    bottom: 0; /* Cover the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+    z-index: 1; /* Ensure it's behind the text */
+}
+
+/* Text styling */
+.home h1, .home h3 {
+    position: relative; /* Position text relative to the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.home .content {
+    max-width: 600px;
+    animation: fadeIn 2s ease;
+}
+
+.home .title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    position: relative; /* Ensure it's positioned correctly */
+    z-index: 2; /* Make sure it's above the overlay */
+    padding: 10px 20px; /* Add some padding */
+    background-color: #1aff31; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #ff0177; /* Darken on hover */
+}
+
+/* About Section */
+.about {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 30px;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble-background {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    border-radius: 50%;
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.about-image {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    animation: imageHover 3s infinite ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+    transform: scale(1.1);
+}
+
+@keyframes imageHover {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .about-image {
+        margin-top: 20px;
+    }
+}
+
+
+/* Projects Section */
+.projects {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: space-between; /* Space out children, pushing the button to the bottom */
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px; /* Set a fixed height (adjust as needed) */
+}
+
+.project-card .btn {
+    /* Optional button styling */
+    padding: 10px 15px; /* Adjust padding as desired */
+    background-color: #f39c12; /* Same color as the heading for consistency */
+    color: #fff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.6;
+    flex-grow: 1; /* Allow paragraph to grow and fill space above the button */
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with opacity */
+    backdrop-filter: blur(5px); /* Blurring effect for background */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.modal-content {
+    background-color: #222; /* Darker background for modal */
+    margin: 10% auto; /* Center the modal */
+    padding: 20px;
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    width: 80%; /* Adjust modal width */
+    max-width: 600px; /* Max width */
+    animation: slideIn 0.5s ease; /* Animation for modal appearance */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0; /* Start from invisible */
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1; /* Fade in */
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for close button */
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* Change color on hover */
+    cursor: pointer;
+}
+
+
+
+
+
+/* Content styling */
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and close button */
+    align-items: center; /* Center items */
+}
+
+.modal-title {
+    font-size: 1.5rem; /* Title size */
+    color: #f39c12; /* Title color */
+}
+
+.modal-body {
+    margin-top: 10px; /* Space between header and body */
+}
+
+.modal-body p {
+    line-height: 1.6; /* Improved line height */
+    color: #ccc; /* Lighter text color */
+}
+
+/* Skills Section */
+.skills {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.skills-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+    border: 1px solid #f39c12;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #f39c12;
+}
+
+.skill p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.skill:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.achievements h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    background-color: #1e1e1e;
+    border: 1px solid #f39c12;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #f39c12;
+}
+
+.achievement-card p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Contact Section */
+.contact {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #f39c12;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2rem;
+    color: #f39c12;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+}
+
+.contact .btn {
+    padding: 12px 25px;
+    background-color: #f39c12;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.4s ease;
+    box-shadow: 0 8px 15px rgba(243, 156, 18, 0.3);
+    cursor: pointer;
+    border: none;
+}
+
+.contact .btn:hover {
+    background-color: #ff851b; /* Slightly darker */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links */
+        position: absolute;
+        top: 70px; /* Position below navbar */
+        left: 0;
+        background: #121212; /* Match the background */
+        width: 100%;
+        display: none; /* Hide by default */
+    }
+
+    .navbar .nav-links.show {
+        display: flex; /* Show when active */
+    }
+
+    .navbar .toggle {
+        display: block; /* Show toggle button */
+    }
+
+    .navbar .toggle.active {
+        transform: rotate(90deg); /* Animation for toggle */
+    }
+
+    .home h1 {
+        font-size: 3rem; /* Smaller text for mobile */
+    }
+
+    .home .title {
+        font-size: 2.5rem; /* Adjust title size */
+    }
+}
